@@ -60,7 +60,7 @@ const Li = styled.li`
 
 class Contacts extends Component {
   handlerInputChange = (e) => {
-    this.props.OnAddFilter(e.target.value);
+    this.props.onAddFilter(e.target.value);
   };
   render() {
     return (
@@ -70,7 +70,7 @@ class Contacts extends Component {
           <Input
             type="text"
             name="search"
-            value={this.props.OnGetFilter()}
+            value={this.props.onGetFilter()}
             onChange={this.handlerInputChange}
           />
         </Label>
@@ -80,7 +80,7 @@ class Contacts extends Component {
               <ContactItem
                 {...contact}
                 index={index}
-                OnDeleteContact={this.props.OnDeleteContact}
+                onDeleteContact={this.props.onDeleteContact}
               />
             </Li>
           ))}
@@ -93,8 +93,8 @@ class Contacts extends Component {
 export default Contacts;
 
 Contacts.propTypes = {
-  OnAddFilter: PropTypes.func.isRequired,
-  OnGetFilter: PropTypes.func.isRequired,
+  onAddFilter: PropTypes.func.isRequired,
+  onGetFilter: PropTypes.func.isRequired,
   contacts: PropTypes.func.isRequired,
-  OnDeleteContact: PropTypes.func.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };

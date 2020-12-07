@@ -42,7 +42,7 @@ const Button = styled.button`
   }
 `;
 
-const ContactItem = ({ id, name, number, OnDeleteContact }) => {
+const ContactItem = ({ id, name, number, onDeleteContact }) => {
   return (
     <>
       <P>
@@ -51,7 +51,7 @@ const ContactItem = ({ id, name, number, OnDeleteContact }) => {
       <Button
         type="button"
         onClick={(e) => {
-          OnDeleteContact(id);
+          onDeleteContact(id);
         }}
       >
         x
@@ -66,5 +66,5 @@ ContactItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
-  OnDeleteContact: PropTypes.func.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };

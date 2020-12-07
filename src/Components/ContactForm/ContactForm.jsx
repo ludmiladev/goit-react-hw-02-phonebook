@@ -103,7 +103,7 @@ class ContactForm extends Component {
       number: number,
     };
     console.log(singleContact);
-    this.props.OnAddContact(singleContact);
+    this.props.onAddContact(singleContact);
     this.setState({ ...this.formInitialState });
   };
 
@@ -138,5 +138,5 @@ class ContactForm extends Component {
 export default ContactForm;
 
 ContactForm.propTypes = {
-  OnAddContact: PropTypes.func.isRequired,
+  onAddContact: PropTypes.func.isRequired,
 };

@@ -26,7 +26,7 @@ class App extends Component {
   addFilter = (query) => {
     this.setState({ filter: query });
   };
-  getFilter = () => {
+    getFilter = (filter) => {
     return this.state.filter;
   };
   filtredContacts = () => {
@@ -49,14 +49,14 @@ class App extends Component {
     return (
       <>
         <Section title={"Phonebook"}>
-          <ContactForm OnAddContact={addContact} />
+          <ContactForm onAddContact={addContact} />
         </Section>
         <Section title={"Contacts"}>
           <Contacts
             contacts={filtredContacts}
-            OnDeleteContact={deleteContact}
-            OnAddFilter={addFilter}
-            OnGetFilter={getFilter}
+            onDeleteContact={deleteContact}
+            onAddFilter={addFilter}
+            onGetFilter={getFilter}
           />
         </Section>
       </>
